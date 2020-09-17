@@ -4,7 +4,7 @@ from checkov.terraform.checks.resource.base_resource_check import BaseResourceCh
 from checkov.common.models.enums import CheckResult, CheckCategories
 import re
 
-VM_NAME_RULE = re.compile('(BSI)-(UKS|UKW)-(PROD|DEV|TEST|UAT|QA)-(.*)-(.*)')
+VM_NAME_RULE = re.compile('(BSI)-(UKS|UKW)-(.*)')
 
 class VMNamePolicy(BaseResourceCheck):
     def __init__(self):
